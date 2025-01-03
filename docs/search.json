@@ -1,0 +1,119 @@
+[
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "Helpful readings\n\nThe Fundamental Theorem of Linear Algebra by Gilbert Strang\n\n\n\nHelpful courses and videos\n\nMatrix Methods In Data Analysis, Signal Processing, And Machine Learning at MIT\nMathematical Foundations of Machine Learning at UChicago\nData Driven Science and Engineering at UW\nSteve Brunton’s SVD videos\n3blue1brown’s Essence of Linear Algebra videos\nData Visualization with R at Georgia State University\n\n\n\nHigh-dimensional datasets\n\n\nExamples of data analyses/visualizations\n\nAdvanced data visualizations by Tanya Shapiro: Going above and beyond the basic capabilities of R visualizations\nData visualization with NFL data by Bradley J Congelio: Great example of using R to generate advanced data visualizations about the NFL.\nExploring college major and income: a live data analysis in R by David Robinson: Video example of a data analysis, in real time.\n\n\n\nDatasets\n\nCDC\nData.gov\nData is Plural\nFederal Reserve Economic Data\nGeneral Social Survey\nGoogle Dataset Search\nHarvard Dataverse\nInternational Monetary Fund\nIPUMS survey data from around the world\nOur World In Data\nPew Research\nPRISM Data Archive Project\nSan Francisco Open Data\nSan Jose Open Data\nStanford Large Network Dataset Collection\nThe National Bureau of Economic Research\nTidyTuesday\nUCI Machine Learning Repository\nUNICEF Data\nUnited Nations Data\nUnited Nations Statistics Division\nUS Census Data\nUS Government Data\nWorld Bank Data\nYouth Risk Behavior Surveillance System (YRBSS)",
+    "crumbs": [
+      "Course information",
+      "Resources"
+    ]
+  },
+  {
+    "objectID": "syllabus.html",
+    "href": "syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "I nstructor\nPeter Gao\n\n\n\n\n*Lectures**\n\nWeekly on Monday and Wednesday, 9-10:15am in MH235\n\n\n\nOffice Hours\nMonday and Wednesday, 10:30-11:30am in MH426 or email for an appointment\n\n\n\nEmail\npeter.gao [at sjsu]\nEmail or the course discussion board is the best way to reach me. Email should be used for administrative/logistics issues and the discussion board should be used for questions on course material or homework. Questions about the homework submitted by email will generally be redirected to the discussion board. I will make every effort to respond to emails/discussion posts within a day, but please feel free to send me a reminder after 48 hours have passed. Please include [MATH 250] in your subject line.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#course-information",
+    "href": "syllabus.html#course-information",
+    "title": "Syllabus",
+    "section": "",
+    "text": "I nstructor\nPeter Gao\n\n\n\n\n*Lectures**\n\nWeekly on Monday and Wednesday, 9-10:15am in MH235\n\n\n\nOffice Hours\nMonday and Wednesday, 10:30-11:30am in MH426 or email for an appointment\n\n\n\nEmail\npeter.gao [at sjsu]\nEmail or the course discussion board is the best way to reach me. Email should be used for administrative/logistics issues and the discussion board should be used for questions on course material or homework. Questions about the homework submitted by email will generally be redirected to the discussion board. I will make every effort to respond to emails/discussion posts within a day, but please feel free to send me a reminder after 48 hours have passed. Please include [MATH 250] in your subject line.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#course-learning-outcomes",
+    "href": "syllabus.html#course-learning-outcomes",
+    "title": "Syllabus",
+    "section": "Course learning outcomes",
+    "text": "Course learning outcomes\nThis course provides an introduction to key mathematical concepts for multivariate and high-dimensional data analysis. In particular, this course focuses on using matrix computation and dimension reduction techniques to visualize and draw conclusions from high-dimensional data. Mathematical topics covered include linear algebra concepts and matrix decompositions that are used for data analysis and visualization (ex. factor analysis, principal components analysis, canonical correlation analysis, multidimensional scaling) and for unsupervised and supervised machine learning methods (ex. spectral clustering, linear discriminant analysis). These ideas will be applied to visualize and analyze real-world examples of high-dimensional datasets. The programming language R will be used to implement the methods and algorithms discussed in class.\nUpon successful completion of this course, students will be able to:\n\nUse software to carry out various linear algebra operations\nPlot and visualize data of various types in software and create publication-quality graphics\nPerform matrix singular value decomposition and other advanced linear algebra operations and interpret their results in the context of data analysis\nApply dimensionality reduction to high dimensional data and visualize them in low dimensions\nDevelop a basic understanding of the machine learning task of clustering",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#materials",
+    "href": "syllabus.html#materials",
+    "title": "Syllabus",
+    "section": "Materials",
+    "text": "Materials\nThe primary texts for the course will be the lecture slides and the following books (available via Library Course Reserves):\n\nStrang, G. (2019). Linear Algebra and Learning From Data. Available for free via Library Course Reserves.\nMurphy, K. P. (2022). Probabilistic Machine Learning: An Introduction. Available for free via Library Course Reserves.\nMurphy, K. P. (2023). Probabilistic Machine Learning: Advanced Topics. Available for free via Library Course Reserves.\n\nThe following texts may be also be helpful:\n\nBaker, J. D. (2024). Applied Multivariate Statistics in R. Available for free here.\nHealy, K. (2019). Data Visualization: A Practical Introduction. Draft version available here.\nStrang, G. (2023). Introduction to Linear Algebra, Sixth Edition.\n\nThe main way we will interact with R is through the software RStudio, both of which can be downloaded and installed for free. The students will be required to have access to a computer with R and RStudio. The computer lab in MacQuarrie Hall 221 contains computers with all of the software that will be used during the semester. All of the coursework may be completed on a personal computer and the software is freely available to students.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#course-requirements-and-grading",
+    "href": "syllabus.html#course-requirements-and-grading",
+    "title": "Syllabus",
+    "section": "Course requirements and grading",
+    "text": "Course requirements and grading\n\nHomework: Throughout the semester, you complete homework assignments. You will typically have two weeks for a homework assignment. At the end of the quarter, your lowest lab grade will be dropped.\nExams: There will be two exams during the semester. Practice questions will be provided in advance of the exams. There will be no make-up exams.\nFinal project: During the semester, you will complete a class project that requires you to apply the data manipulation, visualization, and analysis skills covered in this course to a real-world dataset of your choice. Throughout the semester, you will submit a project proposal and multiple checkpoint assignments that will help you to prepare a final report and presentation.\nLate Work: In general, the late policy is as follows: Any assignment that is received late but less than 24 hours late will receive a grade penalty of 25%. Any assignment that is received 24 to 48 hours late will receive a grade penalty of 50%. Assignments will not be accepted more than 48 hours late. Extensions for academic purposes (ex. conference presentation or job interview) or extreme circumstances (ex. illness, emergency) will generally be granted. If you would like to request an extension, please do your best to email me at least 24 hours before an assignment is due, along with the reason. \n\nSuccess in this course is based on the expectation that students will spend, for each unit of credit, a minimum of 45 hours over the length of the course (normally three hours per unit per week) for instruction, preparation/studying, or course related activities, including but not limited to internships, labs, and clinical practica. Other course structures will have equivalent workload expectations as described in the syllabus.\n\nGrading scale\nYour final grade will be calculated as follows:\n\n40%: Homework\n20%: Exam 1 \n20%: Exam 2\n20%: Final project\n\nThere may be the opportunity for extra credit.\n\n\n\nLetter Grade\nRaw Percentage\n\n\n\n\nA plus\n96 to 100%\n\n\nA\n93 to 95%\n\n\nA minus\n90 to 92%\n\n\nB plus\n86 to 89%\n\n\nB\n83 to 85%\n\n\nB minus\n80 to 82%\n\n\nC plus\n76 to 79%\n\n\nC\n73 to 75%\n\n\nC minus\n70 to 72%\n\n\nD plus\n66 to 69%\n\n\nD\n63 to 65%\n\n\nD minus\n60 to 62%\n\n\nF\n0 to 60%",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#course-schedule",
+    "href": "syllabus.html#course-schedule",
+    "title": "Syllabus",
+    "section": "Course Schedule",
+    "text": "Course Schedule\nThe updated course schedule is available on the course homepage here.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "syllabus.html#policies",
+    "href": "syllabus.html#policies",
+    "title": "Syllabus",
+    "section": "Policies",
+    "text": "Policies\n\nFeedback\nI encourage and appreciate your feedback throughout the quarter. You are welcome to provide feedback on any aspect of the course at any time via email or in person. If you would prefer to do so confidentially, you can do so through the anonymous feedback form on this website.\n\n\nCollaboration\nOn most assignments, collaboration is allowed and encouraged. You may discuss problems, approaches, and solutions with your classmates. Acceptable collaboration is limited to your classmates in this course and you must clearly include on any collaborative work the name(s) of anyone with whom you worked. Additionally, all submitted work must be your own; you should not submit code or answers copied from any resource including your classmates. Plagiarism and cheating is easy to detect and can lead to serious negative consequences for you. If you have any questions regarding this policy, please ask for clarification.\n\n\nOnline resources\nStudents may use external online resources including discussion forums (ex. StackOverflow) large language model-based chatbots (ex. ChatGPT) as aids for learning and understanding course material. However, submitting code or answers for course labs, assignments, exams, and projects obtained using external resources like StackOverflow or ChatGPT is not permitted. When external resources are consulted for an assignment, they must be cited clearly at the top of your submission.\n\n\nDiscussion\nYou are encouraged to participate on the discussion forum by posting questions about assignments and answering questions from other students. Posts may not include substantial amounts of code that can be used for a solution to any problem, but may include code snippets within reason. Participation, in the form of both questions and answers, can earn you up to 2% extra credit for your final grade. Posts will be evaluated based on how substantive and helpful they are to the class.\n\n\nUniversity policies\nPer University Policy S16-9, relevant university policy concerning all courses, such as student responsibilities, academic integrity, accommodations, dropping and adding, consent for recording of class, etc. and available student services (e.g. learning assistance, counseling, and other resources) are listed on Syllabus Information web page (link). Make sure to visit this page to review and be aware of these university policies and resources.",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "MATH250: Mathematical Methods for Data Visualization",
+    "section": "",
+    "text": "Week\nDate\nTopic\nReadings\nSlides\nHW\n\n\n\n\n1\nW 1/24\nOverview: Data as representation\n\nSlides 01\nHW 01\n\n\n2\nM 1/29\nHighlights of linear algebra\nStrang I.1 and I.2, Murphy Ch. 7\nNotes 02\n\n\n\n\nW 1/31\nHighlights of linear algebra\nStrang I.3 and I.4\nNotes 03\nHW 02 Lab\n\n\n3\nM 2/5\nHighlights of linear algebra\nStrang I.5 and I.6\nNotes 04\n\n\n\n\nW 2/7\nHighlights of linear algebra\nStrang I.7\nNotes 05\n\n\n\n4\nM 2/12\nSingular value decomposition\nStrang I.8 and I.9\nNotes 06\n\n\n\n\nW 2/14\nSingular value decomposition\n\nNotes 07\nHW 03 Lab\n\n\n5\nM 2/19\nPrincipal components analysis\nStrang I.10, I.11, and I.12, Murphy 20.1\nNotes 08\n\n\n\n\nW 2/21\nPrincipal components analysis\n\nSlides 09\n\n\n\n6\nM 2/26\nPrincipal components analysis\nStrang II.1 and II.2\nSlides 10\n\n\n\n\nW 2/28\nLinear systems and least squares\n\nNotes 11\n\n\n\n7\nM 3/4\nDimension reduction and statistical inference\n\nNotes 12\nHW 04 Lab\n\n\n\nW 3/6\nEXAM I\n\n\n\n\n\n8\nM 3/11\nDimension reduction and statistical inference\nMurphy 3.1, 3.2, 20.2\nSlides 13\n\n\n\n\nW 3/13\nDimension reduction and statistical inference\n\n\n\n\n\n9\nM 3/18\nVisualization\nMurphy 20.4\nSlides 14\nHW 05 Lab\n\n\n\nW 3/20\nVisualization\n\n\n\n\n\n10\nM 3/25\nManifold learning\nMurphy 20.3 and 20.4\nSlides 15\n\n\n\n\nW 3/27\nManifold learning\n\n\nHW 06\n\n\n\nM 4/1\nCesar Chavez Day - No class\n\n\n\n\n\n\nW 4/3\nSpring Break - No class\n\n\n\n\n\n11\nM 4/8\nManifold learning\nMurphy 20.3 and 20.4\nSlides 16\n\n\n\n\nW 4/10\nManifold learning\n\n\nHW 07\n\n\n12\nM 4/15\nClassification\nMurphy Ch. 9\nSlides 17\n\n\n\n\nW 4/17\nClassification\n\n\n\n\n\n13\nM 4/22\nClustering\nMurphy 21.5\nSlides 18\n\n\n\n\nW 4/24\nText mining\n\nSlides 19\n\n\n\n14\nM 4/29\nEmbeddings and LLMs\nMurphy 20.5\n\n\n\n\n\nW 5/1\nReview\n\n\n\n\n\n15\nM 5/6\nEXAM II\n\n\n\n\n\n\nW 5/8\nFinal presentations\n\n\n\n\n\n16\nM 5/13\nFinal presentations",
+    "crumbs": [
+      "Course information",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "license.html",
+    "href": "license.html",
+    "title": "License",
+    "section": "",
+    "text": "These course materials are licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.\nThis is a brief summary of the license, which can be found here. Official translations of this license are available in other languages.\nYou are free to:\n\nShare — copy and redistribute the material in any medium or format\nAdapt — remix, transform, and build upon the material\n\nUnder the following terms:\n\nAttribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.\nNonCommercial — You may not use the material for commercial purposes.\nShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.\nNo additional restrictions — You may not apply legal terms or technological measures that legally restrict others from doing anything the license permits.",
+    "crumbs": [
+      "Course information",
+      "License"
+    ]
+  }
+]

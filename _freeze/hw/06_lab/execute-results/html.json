@@ -1,0 +1,16 @@
+{
+  "hash": "1eab8500acdfee106040c834f5a0668d",
+  "result": {
+    "markdown": "---\ntitle: \"Visualization and manifold learning lab\"\nauthor: \"YOUR NAME HERE\"\ndate: \"\"\nformat: \n  html:\n    embed-resources: true\n    code-tools: true\n    code-summary: \"Code\"\n---\n\nYour solutions should include both R code and any output requested. You may organize your solutions using an R Markdown document or in a pdf/docx format. If you use this .Rmd as your starting template, please remove all instructions, details, and requirements. \n\nYou may collaborate with your classmates and consult external resources, but you should write and submit your own answer. **Any classmates with whom you collaborate should be credited at the top of your submission. Similarly, if you consult any external references, you should cite them clearly and explicitly.**\n\n## A. Multidimensional Scaling and Isomap\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(dimRed)\nset.seed(123)\ndat <- loadDataSet(\"Broken Swiss Roll\", n = 500)\n```\n:::\n\n\n1. Calculate the matrix of pairwise Euclidean distances. Use multidimensional scaling to compute a two-dimensional embedding of $X$. Is MDS able to \"unfold\" the broken swiss roll? Interpret your findings.\n\n2. What is the Kruskal stress of this embedding?\n\n3. Use Isomap to compute a two-dimensional embedding, using $k$-nearest neighbors to construct a graph, where $k=10$. Is MDS able to \"unfold\" the broken swiss roll? Interpret your findings.\n\n4. Repeat your analysis for $k = 5, k = 8, k = 10, k = 15, k = 20$. What happens as $k$ changes? Explain and discuss your results.\n\n5. Choose another dataset from `dimRed` (use the `dataSetList()` package to get a list of available data) and repeat question 4. What do you notice?\n\n## B. Artificial clusters\n\n6. Use the following code to generate 100-dimensional data from a standard multivariate normal distribution. Use tSNE to compute a two-dimensional embedding of $X$, for perplexity values 2, 5, and 10. What happens as the perplexity changes? Explain and discuss your results.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nset.seed(123)\nn <- 100\np <- 100\nX <- matrix(rnorm(n * p), nrow = n)\n```\n:::\n\n\n## C. Your choice of data\n\n7. For your choice of dataset (including potentially the data for your final project), compare two of the following dimension reduction and visualization methods: MDS, Isomap, Diffusion Maps, Laplacian Eigenmaps, tSNE, and UMAP. Explain and discuss any differences.\n\n",
+    "supporting": [
+      "06_lab_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "hash": "28eb77f75daa41342450e5893342e6bf",
+  "result": {
+    "markdown": "---\ntitle: \"Linear systems and least squares\"\nauthor: \"YOUR NAME HERE\"\ndate: \"\"\nformat: \n  html:\n    embed-resources: true\n    code-tools: true\n    code-summary: \"Code\"\n---\n\nYour solutions should include both R code and any output requested. You may organize your solutions using an R Markdown document or in a pdf/docx format. If you use this .Rmd as your starting template, please remove all instructions, details, and requirements. \n\nYou may collaborate with your classmates and consult external resources, but you should write and submit your own answer. **Any classmates with whom you collaborate should be credited at the top of your submission. Similarly, if you consult any external references, you should cite them clearly and explicitly.**\n\n# A. Solving linear systems\n\nThe following code can be used to generate a 1000 by 1000 matrix $A$ and subsequently construct a linear system whose solution `x` is in $\\mathbb{R}^{1000}$.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nset.seed(100)\nA <- matrix(rnorm(500 * 1000), ncol = 500)\nA <- cbind(A, A + matrix(rnorm(500 * 1000, sd = .1), ncol = 500))\nx <- rnorm(1000)\nb <- A %*% x\n```\n:::\n\n\n1. Compute and interpret the condition number of $A$. \n\n2. If we did not know `x`, we could estimate `x` using either `solve(A) %*% b` or `solve(A, b)`. Use the `Sys.time()` function (or a similar function) to show that one of these approaches is faster. Why is this approach faster?\n\n3. Which approach yields a better estimate of `x`? Calculate the mean squared error of both approaches. \n\n## B. Least squares problems\n\nUsing the `flights` data from the `nycflights13` package, we will implement linear regression. \n\n1. Remove all rows with `NA` values from the `flights` data frame. Let `n` be the number of remaining rows. Construct an $n$ by 2 matrix $X$ where the first column is all 1s (for the intercept) and the second column contains the variable `distance`. Construct a length-$n$ vector `y` containing the variable `air_time`.\n\n2. Use the `chol`, `backsolve`, and `forwardsolve` functions to obtain the least squares solution $\\widehat{\\boldsymbol\\beta}=\\arg\\min_{\\boldsymbol\\beta}||\\mathbf{y}-X\\boldsymbol\\beta||^2$.\n\n3. Use the `qr`, `backsolve`, and `forwardsolve` to obtain the least squares solution $\\widehat{\\boldsymbol\\beta}=\\arg\\min_{\\boldsymbol\\beta}||\\mathbf{y}-X\\boldsymbol\\beta||^2$.\n\n4. Use the `svd` function to compute the pseudoinverse of $X$ and obtain the least squares solution $\\widehat{\\boldsymbol\\beta}$.\n\n5. Use the `lm` function to verify that your estimates from 2, 3, and 4 agree with the standard R linear regression implementation.",
+    "supporting": [
+      "04_lab_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

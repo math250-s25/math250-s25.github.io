@@ -1,0 +1,16 @@
+{
+  "hash": "8fd57f4c9d8979a475abc0a75cc4d12d",
+  "result": {
+    "markdown": "---\ntitle: \"Inference lab\"\nauthor: \"YOUR NAME HERE\"\ndate: \"\"\nformat: \n  html:\n    embed-resources: true\n    code-tools: true\n    code-summary: \"Code\"\n---\n\nYour solutions should include both R code and any output requested. You may organize your solutions using an R Markdown document or in a pdf/docx format. If you use this .Rmd as your starting template, please remove all instructions, details, and requirements. \n\nYou may collaborate with your classmates and consult external resources, but you should write and submit your own answer. **Any classmates with whom you collaborate should be credited at the top of your submission. Similarly, if you consult any external references, you should cite them clearly and explicitly.**\n\n## A. One-factor model for stock market analysis.\n\nThe [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday/tree/master) project provides cleaned dataset for practice with data analysis in R. In this lab, we will use a one-factor model to explore the [Big Tech Stock Prices](https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-02-07/readme.md) data.\n\n1. The following code can be used to download the data. Create a line plot with `date` on the x-axis, `close` on the y-axis, and a different color line for each `stock_symbol`. Briefly interpret your visualization.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\nbig_tech_stock_prices <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-02-07/big_tech_stock_prices.csv')\n```\n:::\n\n\n2. The following code can be used to transform a subset of the data into a matrix, where each row is a date and each column is a different technology stock. The values in the matrix represent the stock price on the specified date. Use this `stocks` matrix to carry out a factor analysis with one factor using the `factanal` function.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nstocks <- big_tech_stock_prices |>\n  filter(date > \"2016-01-01\" & date < \"2022-12-30\") |>\n  select(stock_symbol, date, close) |>\n  pivot_wider(names_from = date, values_from = close) |>\n  select(-stock_symbol) |>\n  as.matrix() |> t()\n```\n:::\n\n\n3. Can we assign any interpretation to the factor? What do the factor loadings represent?\n\n4. What is the proportion of variance in the data explained by the factor? \n\n5. Which stock has the highest uniqueness value? Which has the lowest uniqueness? Explain what the uniqueness values represent in this context.\n\n",
+    "supporting": [
+      "05_lab_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

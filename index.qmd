@@ -1,11 +1,50 @@
 ---
-title: "math250-s25.github.io"
+title: "MATH250: Mathematical Methods for Data Visualization"
+format: html
+draft: false
 ---
 
-This is a Quarto website.
+::: column-screen-inset-right
+| Week | Date   | Topic                                         | Readings                                 |                               Slides                               |                                             HW                                              |
+|:---------:|-----------|-----------|:----------|:---------:|:----------------:|
+|  1   | W 1/24 | Overview: Data as representation              |                                          |       [Slides 01](slides/01_intro.pdf){.label .label-purple}       |                           [HW 01](hw/hw1.pdf){.label .label-red}                            |
+|  2   | M 1/29 | Highlights of linear algebra                  | Strang I.1 and I.2, Murphy Ch. 7         |       [Notes 02](slides/02_notes.pdf){.label .label-purple}        |                                                                                             |
+|      | W 1/31 | Highlights of linear algebra                  | Strang I.3 and I.4                       |       [Notes 03](slides/03_notes.pdf){.label .label-purple}        | [HW 02](hw/hw2.pdf){.label .label-red} [Lab](hw/matrix-algebra-lab.html){.label .label-red} |
+|  3   | M 2/5  | Highlights of linear algebra                  | Strang I.5 and I.6                       |       [Notes 04](slides/04_notes.pdf){.label .label-purple}        |                                                                                             |
+|      | W 2/7  | Highlights of linear algebra                  | Strang I.7                               |       [Notes 05](slides/05_notes.pdf){.label .label-purple}        |                                                                                             |
+|  4   | M 2/12 | Singular value decomposition                  | Strang I.8 and I.9                       |       [Notes 06](slides/06_notes.pdf){.label .label-purple}        |                                                                                             |
+|      | W 2/14 | Singular value decomposition                  |                                          |       [Notes 07](slides/07_notes.pdf){.label .label-purple}        |      [HW 03](hw/hw3.pdf){.label .label-red} [Lab](hw/SVD-lab.html){.label .label-red}       |
+|  5   | M 2/19 | Principal components analysis                 | Strang I.10, I.11, and I.12, Murphy 20.1 |       [Notes 08](slides/08_notes.pdf){.label .label-purple}        |                                                                                             |
+|      | W 2/21 | Principal components analysis                 |                                          |        [Slides 09](slides/10_PCA.pdf){.label .label-purple}        |                                                                                             |
+|  6   | M 2/26 | Principal components analysis                 | Strang II.1 and II.2                     |        [Slides 10](slides/10_PCA.pdf){.label .label-purple}        |                                                                                             |
+|      | W 2/28 | Linear systems and least squares              |                                          |       [Notes 11](slides/11_notes.pdf){.label .label-purple}        |                                                                                             |
+|  7   | M 3/4  | Dimension reduction and statistical inference |                                          |       [Notes 12](slides/12_notes.pdf){.label .label-purple}        |       [HW 04](hw/hw4.pdf){.label .label-red} [Lab](hw/04_lab.html){.label .label-red}       |
+|      | W 3/6  | EXAM I                                        |                                          |                                                                    |                                                                                             |
+|  8   | M 3/11 | Dimension reduction and statistical inference | Murphy 3.1, 3.2, 20.2                    |     [Slides 13](slides/13_inference.pdf){.label .label-purple}     |                                                                                             |
+|      | W 3/13 | Dimension reduction and statistical inference |                                          |                                                                    |                                                                                             |
+|  9   | M 3/18 | Visualization                                 | Murphy 20.4                              |   [Slides 14](slides/14_visualization.pdf){.label .label-purple}   |       [HW 05](hw/hw5.pdf){.label .label-red} [Lab](hw/05_lab.html){.label .label-red}       |
+|      | W 3/20 | Visualization                                 |                                          |                                                                    |                                                                                             |
+|  10  | M 3/25 | Manifold learning                             | Murphy 20.3 and 20.4                     | [Slides 15](slides/15_manifold-learning.pdf){.label .label-purple} |                                                                                             |
+|      | W 3/27 | Manifold learning                             |                                          |                                                                    |                         [HW 06](hw/06_lab.html){.label .label-red}                          |
+|      | M 4/1  | *Cesar Chavez Day - No class*                 |                                          |                                                                    |                                                                                             |
+|      | W 4/3  | *Spring Break - No class*                     |                                          |                                                                    |                                                                                             |
+|  11  | M 4/8  | Manifold learning                             | Murphy 20.3 and 20.4                     | [Slides 16](slides/16_manifold-learning.pdf){.label .label-purple} |                                                                                             |
+|      | W 4/10 | Manifold learning                             |                                          |                                                                    |                           [HW 07](hw/hw7.pdf){.label .label-red}                            |
+|  12  | M 4/15 | Classification                                | Murphy Ch. 9                             |  [Slides 17](slides/17_classification.pdf){.label .label-purple}   |                                                                                             |
+|      | W 4/17 | Classification                                |                                          |                                                                    |                                                                                             |
+|  13  | M 4/22 | Clustering                                    | Murphy 21.5                              |    [Slides 18](slides/18_clustering.pdf){.label .label-purple}     |                                                                                             |
+|      | W 4/24 | Text mining                                   |                                          |    [Slides 19](slides/19_text-mining.pdf){.label .label-purple}    |                                                                                             |
+|  14  | M 4/29 | Embeddings and LLMs                           | Murphy 20.5                              |                                                                    |                                                                                             |
+|      | W 5/1  | Review                                        |                                          |                                                                    |                                                                                             |
+|  15  | M 5/6  | EXAM II                                       |                                          |                                                                    |                                                                                             |
+|      | W 5/8  | Final presentations                           |                                          |                                                                    |                                                                                             |
+|  16  | M 5/13 | Final presentations                           |                                          |                                                                    |                                                                                             |
+:::
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
-
-```{r}
-1 + 1
+```{r echo = FALSE}
+knitr::knit_exit()
 ```
+
+|      |      |       | Prepare | Slides |                    AE                    | Labs | HW  | Exam | Project |
+|-------|-------|-------|:-----:|:-----:|:--------------:|:-----:|:-----:|:-----:|:-----:|
+| Week | Date | Topic |   📖    |   🖥️   | 📋 [Lab 01](hello){.label .label-purple} |  ✍️  |     |      |         |

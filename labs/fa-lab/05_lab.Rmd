@@ -1,0 +1,42 @@
+---
+title: "Inference lab"
+author: "YOUR NAME HERE"
+date: ""
+format: 
+  html:
+    embed-resources: true
+    code-tools: true
+    code-summary: "Code"
+---
+Your solutions should include both R code and any output requested. You may organize your solutions using an R Markdown document or in a pdf/docx format. If you use this .Rmd as your starting template, please remove all instructions, details, and requirements. 
+
+You may collaborate with your classmates and consult external resources, but you should write and submit your own answer. **Any classmates with whom you collaborate should be credited at the top of your submission. Similarly, if you consult any external references, you should cite them clearly and explicitly.**
+
+## A. One-factor model for stock market analysis.
+
+The [Tidy Tuesday](https://github.com/rfordatascience/tidytuesday/tree/master) project provides cleaned dataset for practice with data analysis in R. In this lab, we will use a one-factor model to explore the [Big Tech Stock Prices](https://github.com/rfordatascience/tidytuesday/blob/master/data/2023/2023-02-07/readme.md) data.
+
+1. The following code can be used to download the data. Create a line plot with `date` on the x-axis, `close` on the y-axis, and a different color line for each `stock_symbol`. Briefly interpret your visualization.
+
+```{r}
+library(tidyverse)
+big_tech_stock_prices <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2023/2023-02-07/big_tech_stock_prices.csv')
+```
+
+2. The following code can be used to transform a subset of the data into a matrix, where each row is a date and each column is a different technology stock. The values in the matrix represent the stock price on the specified date. Use this `stocks` matrix to carry out a factor analysis with one factor using the `factanal` function.
+
+```{r}
+stocks <- big_tech_stock_prices |>
+  filter(date > "2016-01-01" & date < "2022-12-30") |>
+  select(stock_symbol, date, close) |>
+  pivot_wider(names_from = date, values_from = close) |>
+  select(-stock_symbol) |>
+  as.matrix() |> t()
+```
+
+3. Can we assign any interpretation to the factor? What do the factor loadings represent?
+
+4. What is the proportion of variance in the data explained by the factor? 
+
+5. Which stock has the highest uniqueness value? Which has the lowest uniqueness? Explain what the uniqueness values represent in this context.
+
