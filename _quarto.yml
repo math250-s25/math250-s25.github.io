@@ -6,11 +6,11 @@ project:
 website:
   title: "MATH250"
   page-navigation: true
-  description: "Homepage for MATH250, Spring 2024 at SJSU"
+  description: "Homepage for MATH250, Spring 2025 at SJSU"
   open-graph: true
   page-footer:
     right: "Built with [Quarto](https://quarto.org/) based on the website for [STA 210](https://sta210-s22.github.io/website/)."
-    left: "&copy; Copyright 2024, Peter A. Gao"
+    left: "&copy; Copyright 2025, Peter A. Gao"
 
   sidebar:    
     background: "#0055A2"
@@ -28,7 +28,7 @@ website:
             text: Final Project
           - href: resources.qmd
             text: Resources
-          - href: https://forms.gle/sueMvqixLSUaztsx5
+          - href: https://forms.gle/bnmh63nsVyYEh3977
             text: Feedback
           - href: license.qmd
             text: License

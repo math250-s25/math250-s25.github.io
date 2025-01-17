@@ -1,6 +1,6 @@
 ---
 title: "Final Project"
-date: "2024-05-10"
+date: "2025-01-27"
 format: 
   html:
     embed-resources: true
@@ -14,7 +14,7 @@ draft: true
 This course culminates with a project in which you will explore a dataset or dimension reduction technique of your choice. Examples of appropriate projects include the following:
 
 -   Present a dimension reduction method not covered in class. You should introduce the key technical details of your algorithm and demonstrate your selected approach on a real dataset.
--   Apply a dimension reduction method covered in this course to a real-world dataset and interpret the results. You should review your selected approach, explore different options and parameter configurations, and discuss strengths, weaknesses, and potential pitfalls of your approach.
+-   Provide a tutorial introducing a dimension reduction method covered in this course at a level suitable for junior/senior undergraduate students or graduate students. You should apply your method to a real-world dataset, review your selected approach, explore different options and parameter configurations, and discuss strengths, weaknesses, and potential pitfalls of your approach.
 -   Compare two or more dimension reduction methods covered in this course using a real-world dataset or simulated data. Review the technical details of your selected approaches, discuss differences in their performance, and offer practical advice on choosing a dimension reduction technique in your chosen setting.
 -   Extend an existing dimension reduction method or review a theoretical result/paper not discussed in class.
 
@@ -28,7 +28,7 @@ Your project will be evaluated based on the following aspects of your work:
 
 This project is intentionally open-ended: there are no predetermined right answers. Exceptional projects will demonstrate mastery of the course material and involve more than a superficial review of a method covered in class or application using a toy dataset.
 
-## Part One: Project Proposal (10 points), due 3/29
+## Part One: Project Proposal (10 points), due 3/28
 
 You will submit a 1-2 page project proposal with the following information:
 
@@ -41,7 +41,7 @@ You will submit a 1-2 page project proposal with the following information:
 
 You are encouraged to meet with the instructor to discuss potential project topics and datasets **before** beginning your project proposal. If you wish to use a dataset discussed in class, you should obtain instructor approval.
 
-## Part Two: Final Report (70 points), due 5/13
+## Part Two: Final Report (70 points), due 5/12
 
 You will also submit a written report that clearly explains your project and findings. The structure of your report will depend on your selected project topic, but a broad outline could look like the following:
 
@@ -53,7 +53,7 @@ You will also submit a written report that clearly explains your project and fin
 
 There is no explicit page limit/requirement, but a report of 5-7 single-spaced pages, not including figures/references, should be sufficient for most projects. The target audience of your report is a classmate who may not be familiar with your selected datasets or dimension reduction algorithms.
 
-## Part Three: Class Presentation (15 points), slides due 5/13
+## Part Three: Class Presentation (15 points), slides due 5/12
 
 At the end of the semester, you will deliver a brief lightning talk in class. You should rehearse your presentation in advance and it should include:
 
@@ -61,7 +61,7 @@ At the end of the semester, you will deliver a brief lightning talk in class. Yo
 -   Description of any applications/simulations you performed and the results
 -   Summary of your findings and questions for future research
 
-## Part Four: Reflection and Self-evaluation (5 points), due 5/13
+## Part Four: Reflection and Self-evaluation (5 points), due 5/12
 
 You will complete a 1-2 page reflection and self-evaluation on your work for this final project and course. Briefly answer the following questions:
 
