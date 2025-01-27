@@ -24,8 +24,6 @@ website:
             text: Syllabus
           - href: index.qmd
             text: Schedule
-          - href: final_project.qmd
-            text: Final Project
           - href: resources.qmd
             text: Resources
           - href: https://forms.gle/bnmh63nsVyYEh3977

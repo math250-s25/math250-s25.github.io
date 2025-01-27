@@ -16,6 +16,7 @@ draft: false
 -   [Steve Brunton's SVD videos](https://www.youtube.com/playlist?list=PLMrJAkhIeNNSVjnsviglFoY2nXildDCcv)
 -   [3blue1brown's Essence of Linear Algebra videos](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
 -   [Data Visualization with R at Georgia State University](https://datavizf23.classes.andrewheiss.com)
+-   [Mathematics for Deep Learning at University of Tübingen](https://uni-tuebingen.de/de/241678)
 
 # High-dimensional datasets
 
