@@ -1,0 +1,390 @@
+---
+title: "Matrix Algebra in R"
+author: "YOUR NAME HERE"
+date: "2025-2-19"
+format: 
+  html:
+    embed-resources: true
+    code-tools: true
+    code-summary: "Code"
+---
+
+Review the following tutorial on basic matrix algebra in R and complete the exercises at the bottom. Your solutions should include both R code and any output requested. You may organize your solutions using an R Markdown document or in a pdf/docx format.
+
+You may collaborate with your classmates and consult external resources, but you should write and submit your own answer. **Any classmates with whom you collaborate should be credited at the top of your submission. Similarly, if you consult any external references, you should cite them clearly and explicitly.**
+
+# Preliminaries
+
+If you have never used R or are a little rusty, consider reviewing the tutorial [here](https://github.com/matloff/fasteR#overview) or the textbook [here](https://r4ds.hadley.nz/whole-game).
+
+# Vectors
+
+In R, vectors are sets of elements of the same type. We can create vectors using the concatenation function `c()` or by using a function like `numeric()` or `double()` to create a vector of a specific type.
+
+```{r, echo = T, eval = T}
+x <- c(16, 3, 0, 7, -2) # values specified
+print(x)
+y <- numeric(5) # empty numeric vector of length 5.
+print(y)
+```
+
+We index vectors using `[index]` after the vector name:
+
+```{r, echo = T, eval = T}
+x[3]
+x[4]
+```
+
+If we use a negative index, we return the vector with that element removed:
+
+```{r, echo = T, eval = T}
+x[-4]
+```
+
+Note that atomic vectors can only have one type of data. So the following lines work:
+
+```{r, echo = T, eval = T}
+x <- c(1, 2, 3)
+y <- c("a", "b", "c")
+z <- c(T, F, T)
+```
+
+but when we try
+
+```{r, echo = T, eval = T}
+c(1, "b", 3)
+```
+
+R will force the elements in our vector to be of the same type. This is a common source of bugs.
+
+## Generating vectors
+
+The notation `a:b` generates integers starting at `a` and ending at `b`.
+
+```{r, echo = T, eval = T, error = T}
+1:6
+```
+
+The `rep` function repeats values of the first argument.
+
+```{r, echo = T, eval = T, error = T}
+rep("Hello", times = 3)
+```
+
+The `rnorm` function randomly generates `n` elements with the specified `mean` and `sd`.
+
+```{r, echo = T, eval = T, error = T}
+rnorm(n = 10, mean = 1, sd = 1)
+```
+
+## Vector operations
+
+Operations involving two vectors of the same length `x` and `y` are typically carried out element-wise:
+
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+x <- 1:4
+y <- 5:8
+x + y # element-wise addition
+x * y # element-wise multiplication
+```
+
+Operations involving a vector and a scalar are typically carried out along the entire vector, recycling the scalar value.
+
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+x <- 1:4
+x + 2 # scalar addition
+x * 2 # scalar multiplication
+```
+
+The dot product can be carried out by using element-wise multiplication with the `sum()` function or the `%*%` operator
+
+```{r}
+#| echo: TRUE
+#| eval: TRUE
+x <- 1:4
+y <- 5:8
+sum(x * y)
+x %*% y
+```
+
+
+
+
+## Useful functions for vectors
+
+-   `max()`, `min()`, `mean()`, `median()`, `sum()`, `sd()`, `var()`
+-   `length()` returns the number of elements in the vector
+-   `head()` and `tail()` return the beginning and end vectors
+-   `sort()` will sort
+-   `summary()` returns a 5-number summary
+-   `any()` and `all()` to check conditions on Boolean vectors
+-   `hist()` will return a crude histogram 
+
+# Matrices
+
+**Matrices** are two-dimensional extensions of vectors: they have **rows** and **columns**. We can create a matrix using the function `matrix()`.
+
+```{r, echo = T, eval = T, error = T}
+x <- c(1, 2, 3, 4, 5)
+y <- c(5, 4, 3, 2, 1)
+my_matrix <- matrix(c(x, y), nrow = 2, ncol = 5, byrow = TRUE)
+my_matrix
+```
+
+We can also generate matrices by column binding (`cbind()`) and row binding (`rbind()`) vectors:
+
+```{r, echo = T, eval = T, error = T}
+cbind(x, y)
+rbind(x, y)
+```
+
+Indexing a matrix is similar to indexing a vector, except we must index both the row and column, in that order.
+
+```{r, echo = T, eval = T, error = T}
+my_matrix
+my_matrix[2, 3]
+```
+
+As with vectors, we can subset using a negative index.
+
+```{r, echo = T, eval = T, error = T}
+my_matrix
+my_matrix[-2, -4]
+# Note: Leaving an index blank includes all indices
+my_matrix[, -c(1, 3, 4, 5)]
+```
+
+What happened here? When subsetting a matrix reduces one dimension to length 1, R automatically coerces it into a vector. We can prevent this by including `drop = FALSE`.
+
+```{r, echo = T, eval = T, error = T}
+my_matrix[, -c(1, 3, 4, 5)]
+is.matrix(my_matrix[, -c(1, 3, 4, 5)])
+my_matrix[, -c(1, 3, 4, 5), drop = FALSE]
+```
+
+We can also fill in an empty matrix using indices. In R, you should always start by initializing an empty matrix of the right size.
+
+```{r, echo = T, eval = T, error = T}
+my_results <- matrix(NA, nrow = 3, ncol = 3)
+my_results
+```
+
+Then I can replace a single row (or column) using indices as follows.
+
+```{r, echo = T, eval = T, error = T}
+my_results[2, ] <- c(2, 4, 3)
+my_results
+```
+
+We can also fill in multiple rows (or columns) at once. (Likewise, we can also do subsets of rows/columns, or unique entries). Note that values are **recycled**:
+
+```{r, echo = T, eval = T, error = T}
+my_results[c(1, 3), ] <- 7
+my_results
+```
+
+Matrices, like vectors, can only have entries of one type.
+
+```{r, echo = T, eval = T, error = T}
+rbind(c(1, 2, 3), c("a", "b", "c"))
+```
+
+## Matrix operations
+
+Let's create 3 matrices for the purposes of demonstrating matrix functions.
+
+```{r, echo = T, eval = T, error = T}
+mat1 <- matrix(1:6, nrow = 2, ncol = 3, byrow = TRUE)
+mat1
+mat2 <- matrix(1:6, nrow = 3, ncol = 2)
+mat2
+mat3 <- matrix(5:10, nrow = 2, ncol = 3, byrow = TRUE)
+mat3
+```
+
+For matrices of the same dimensions, element-wise operations are available:
+
+```{r, echo = T, eval = T, error = T}
+mat1 + mat3 # element-wise addition
+mat1 * mat3 # element-wise multiplication
+```
+
+For matrix multiplication, we use the `%*%` operator:
+
+```{r, echo = T, eval = T, error = T}
+mat_square <- mat1 %*% mat2
+mat_square
+```
+
+## Useful functions for matrices
+
+#### Column Bind Matrices `cbind()`
+
+```{r, echo = T, eval = T, error = T}
+cbind(mat1, mat3)
+```
+
+#### Transpose `t()`
+
+```{r, echo = T, eval = T, error = T}
+t(mat1)
+```
+
+#### Column Sums `colSums()`
+
+```{r, echo = T, eval = T, error = T}
+colSums(mat1)
+```
+
+#### Row Sums `rowSums()`
+
+```{r, echo = T, eval = T, error = T}
+rowSums(mat1)
+```
+
+#### Column Means `colMeans()`
+
+```{r, echo = T, eval = T, error = T}
+colMeans(mat1)
+```
+
+#### Row Means `rowMeans()`
+
+```{r, echo = T, eval = T, error = T}
+rowMeans(mat1)
+```
+
+#### Dimensions `dim()`
+
+```{r, echo = T, eval = T, error = T}
+dim(mat1)
+```
+
+#### Determinant `det()`
+
+```{r, echo = T, eval = T, error = T}
+det(mat_square)
+```
+
+#### Matrix Inverse `solve()`
+
+```{r, echo = T, eval = T, error = T}
+solve(mat_square)
+```
+
+#### Matrix Diagonal `diag()`
+
+```{r, echo = T, eval = T, error = T}
+diag(mat_square)
+```
+
+#### Matrix Trace `sum(diag())`
+
+```{r, echo = T, eval = T, error = T}
+sum(diag(mat_square))
+```
+
+# Eigenvalues
+
+We can use the `eigen()` function to compute eigenvalues and eigenvectors of matrices.
+
+```{r, echo = T, eval = T, error = T}
+mat_asym <- matrix(c(1, 0, 2, 1), nrow = 2)
+ev <- eigen(mat_asym)
+ev$values # eigenvalues
+ev$vectors # eigenvectors
+```
+
+Note that eigenvalues and eigenvectors are calculated numerically, so tiny values (very close to zero) may show up in the eigenvectors. The `zapsmall()` function can be useful to replace these with zero. When a matrix is diagonalizable, the eigenvectors will be orthogonal.
+
+```{r, echo = T, eval = T, error = T}
+mat_asym <- matrix(c(1, 0, 2, 1), nrow = 2)
+ev <- eigen(mat_asym)
+ev$values # eigenvalues
+zapsmall(ev$vectors) # eigenvectors
+```
+
+If your matrix is symmetric, you can specify this using `symmetric = TRUE`.
+
+```{r, echo = T, eval = T, error = T}
+ev <- eigen(mat_square, symmetric = TRUE)
+ev$values # eigenvalues
+ev$vectors # eigenvectors
+```
+
+When a matrix is not diagonalizable, the eigenvectors will not be orthogonal.
+
+```{r, echo = T, eval = T, error = T}
+mat_asym <- matrix(c(0, 0, 1, 0), byrow = T, nrow = 2)
+ev <- eigen(mat_asym)
+ev$values # eigenvalues
+zapsmall(ev$vectors) # eigenvectors
+```
+
+
+# Visualization
+
+The `plot3D` package provides some basic tools for generating static 3D visualizations:
+
+```{r, echo = T, eval = T, message = F, warning = F}
+library(palmerpenguins)
+data(penguins)
+library(plot3D)
+scatter3D(x = penguins$bill_length_mm, 
+          y = penguins$bill_depth_mm, 
+          z = penguins$body_mass_g)
+```
+
+Note that 3D scatter plots are often difficult to read/interpret. You may often be able to get more effective results using a 2D plane and color as your third variable.
+
+```{r, echo = T, eval = T, message = F, warning = F}
+library(ggplot2)
+ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm, color = body_mass_g)) +
+  geom_point() + 
+  scale_color_viridis_c()
+```
+
+# Exercises
+
+1. Create a vector `x` containing the integers 1 through 100 and compute the length of `x` by taking the square root of the dot product of `x` with itself.
+
+2. Construct the following matrices in R and use matrix functions/operations to answer the following questions.
+
+$$
+A=\begin{bmatrix}
+		1 & 2 & 3 & 4 \\
+		0 & 1 & 1 & 2 \\
+		1 & 3 & 4 & 6 
+\end{bmatrix}\hspace{2cm}
+B=\begin{bmatrix}
+		1 & 1 & 2 \\
+		2 & 2 & 4 \\
+		5 & 6 & 7 \\
+		5 & 6 & 8 
+\end{bmatrix}
+$$
+
+  a. What is $AB$?
+  b. What is $B^T A^T$?
+  c. Is $AB$ invertible? If so, what is its inverse?
+  d. Is $A^T A$ invertible? If so, what is its inverse?
+  e. Is $B^T B$ invertible? If so, what is its inverse?
+  f. What are the non-zero eigenvalues of $A^T A$? How do they compare to the non-zero eigenvalues of $AA^T$?
+  
+3. Use matrix operations in R to solve the following system of linear equations:
+
+\begin{align}
+7x+2y+z&=30\\
+8x+2y-z&=24\\
+x+y+z&=12
+\end{align}
+
+4. Use a 3d scatter plot to visualize the relationships between the variables `mpg`, `hp`, and `wt` from the `mtcars` dataset (included in R).
+
+
+  
+
