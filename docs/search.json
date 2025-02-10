@@ -99,6 +99,48 @@
     ]
   },
   {
+    "objectID": "labs/matrix-algebra-lab.html",
+    "href": "labs/matrix-algebra-lab.html",
+    "title": "Matrix Algebra in R",
+    "section": "",
+    "text": "Review the following tutorial on basic matrix algebra in R and complete the exercises at the bottom. Your solutions should include both R code and any output requested. You may organize your solutions using an R Markdown document or in a pdf/docx format.\nYou may collaborate with your classmates and consult external resources, but you should write and submit your own answer. Any classmates with whom you collaborate should be credited at the top of your submission. Similarly, if you consult any external references, you should cite them clearly and explicitly."
+  },
+  {
+    "objectID": "labs/matrix-algebra-lab.html#generating-vectors",
+    "href": "labs/matrix-algebra-lab.html#generating-vectors",
+    "title": "Matrix Algebra in R",
+    "section": "Generating vectors",
+    "text": "Generating vectors\nThe notation a:b generates integers starting at a and ending at b.\n\n1:6\n\n[1] 1 2 3 4 5 6\n\n\nThe rep function repeats values of the first argument.\n\nrep(\"Hello\", times = 3)\n\n[1] \"Hello\" \"Hello\" \"Hello\"\n\n\nThe rnorm function randomly generates n elements with the specified mean and sd.\n\nrnorm(n = 10, mean = 1, sd = 1)\n\n [1] -0.2246169  2.1315710  2.3599192  1.0812675 -0.0785048  1.0471461\n [7]  2.0366317  0.8833474  2.0729662  0.4053206"
+  },
+  {
+    "objectID": "labs/matrix-algebra-lab.html#vector-operations",
+    "href": "labs/matrix-algebra-lab.html#vector-operations",
+    "title": "Matrix Algebra in R",
+    "section": "Vector operations",
+    "text": "Vector operations\nOperations involving two vectors of the same length x and y are typically carried out element-wise:\n\nx &lt;- 1:4\ny &lt;- 5:8\nx + y # element-wise addition\n\n[1]  6  8 10 12\n\nx * y # element-wise multiplication\n\n[1]  5 12 21 32\n\n\nOperations involving a vector and a scalar are typically carried out along the entire vector, recycling the scalar value.\n\nx &lt;- 1:4\nx + 2 # scalar addition\n\n[1] 3 4 5 6\n\nx * 2 # scalar multiplication\n\n[1] 2 4 6 8\n\n\nThe dot product can be carried out by using element-wise multiplication with the sum() function or the %*% operator\n\nx &lt;- 1:4\ny &lt;- 5:8\nsum(x * y)\n\n[1] 70\n\nx %*% y\n\n     [,1]\n[1,]   70"
+  },
+  {
+    "objectID": "labs/matrix-algebra-lab.html#useful-functions-for-vectors",
+    "href": "labs/matrix-algebra-lab.html#useful-functions-for-vectors",
+    "title": "Matrix Algebra in R",
+    "section": "Useful functions for vectors",
+    "text": "Useful functions for vectors\n\nmax(), min(), mean(), median(), sum(), sd(), var()\nlength() returns the number of elements in the vector\nhead() and tail() return the beginning and end vectors\nsort() will sort\nsummary() returns a 5-number summary\nany() and all() to check conditions on Boolean vectors\nhist() will return a crude histogram"
+  },
+  {
+    "objectID": "labs/matrix-algebra-lab.html#matrix-operations",
+    "href": "labs/matrix-algebra-lab.html#matrix-operations",
+    "title": "Matrix Algebra in R",
+    "section": "Matrix operations",
+    "text": "Matrix operations\nLet’s create 3 matrices for the purposes of demonstrating matrix functions.\n\nmat1 &lt;- matrix(1:6, nrow = 2, ncol = 3, byrow = TRUE)\nmat1\n\n     [,1] [,2] [,3]\n[1,]    1    2    3\n[2,]    4    5    6\n\nmat2 &lt;- matrix(1:6, nrow = 3, ncol = 2)\nmat2\n\n     [,1] [,2]\n[1,]    1    4\n[2,]    2    5\n[3,]    3    6\n\nmat3 &lt;- matrix(5:10, nrow = 2, ncol = 3, byrow = TRUE)\nmat3\n\n     [,1] [,2] [,3]\n[1,]    5    6    7\n[2,]    8    9   10\n\n\nFor matrices of the same dimensions, element-wise operations are available:\n\nmat1 + mat3 # element-wise addition\n\n     [,1] [,2] [,3]\n[1,]    6    8   10\n[2,]   12   14   16\n\nmat1 * mat3 # element-wise multiplication\n\n     [,1] [,2] [,3]\n[1,]    5   12   21\n[2,]   32   45   60\n\n\nFor matrix multiplication, we use the %*% operator:\n\nmat_square &lt;- mat1 %*% mat2\nmat_square\n\n     [,1] [,2]\n[1,]   14   32\n[2,]   32   77"
+  },
+  {
+    "objectID": "labs/matrix-algebra-lab.html#useful-functions-for-matrices",
+    "href": "labs/matrix-algebra-lab.html#useful-functions-for-matrices",
+    "title": "Matrix Algebra in R",
+    "section": "Useful functions for matrices",
+    "text": "Useful functions for matrices\n\nColumn Bind Matrices cbind()\n\ncbind(mat1, mat3)\n\n     [,1] [,2] [,3] [,4] [,5] [,6]\n[1,]    1    2    3    5    6    7\n[2,]    4    5    6    8    9   10\n\n\n\n\nTranspose t()\n\nt(mat1)\n\n     [,1] [,2]\n[1,]    1    4\n[2,]    2    5\n[3,]    3    6\n\n\n\n\nColumn Sums colSums()\n\ncolSums(mat1)\n\n[1] 5 7 9\n\n\n\n\nRow Sums rowSums()\n\nrowSums(mat1)\n\n[1]  6 15\n\n\n\n\nColumn Means colMeans()\n\ncolMeans(mat1)\n\n[1] 2.5 3.5 4.5\n\n\n\n\nRow Means rowMeans()\n\nrowMeans(mat1)\n\n[1] 2 5\n\n\n\n\nDimensions dim()\n\ndim(mat1)\n\n[1] 2 3\n\n\n\n\nDeterminant det()\n\ndet(mat_square)\n\n[1] 54\n\n\n\n\nMatrix Inverse solve()\n\nsolve(mat_square)\n\n           [,1]       [,2]\n[1,]  1.4259259 -0.5925926\n[2,] -0.5925926  0.2592593\n\n\n\n\nMatrix Diagonal diag()\n\ndiag(mat_square)\n\n[1] 14 77\n\n\n\n\nMatrix Trace sum(diag())\n\nsum(diag(mat_square))\n\n[1] 91"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",

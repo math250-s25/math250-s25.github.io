@@ -7,6 +7,7 @@ format:
     embed-resources: true
     code-tools: true
     code-summary: "Code"
+draft: false
 ---
 
 Review the following tutorial on basic matrix algebra in R and complete the exercises at the bottom. Your solutions should include both R code and any output requested. You may organize your solutions using an R Markdown document or in a pdf/docx format.
