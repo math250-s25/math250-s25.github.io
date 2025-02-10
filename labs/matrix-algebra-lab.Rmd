@@ -383,8 +383,35 @@ $$
 x+y+z&=12
 \end{align}
 
-4. Use a 3d scatter plot to visualize the relationships between the variables `mpg`, `hp`, and `wt` from the `mtcars` dataset (included in R).
+The `usps` dataset in the `Rdimtools` package may be loaded using the following code (be sure to install the `Rdimtools` package first).
 
+```{r, message = F, warning = F}
+library(Rdimtools)
+data(usps)
+```
+
+The data consists of a list whose first element is `data`, an 11000 by 256 matrix of numbers between 0 and 255. Each row of this matrix represents a 16 by 16 pixel image of a handwritten digit. For example, if we wish to look at the 1st handwritten digit, we can convert the first row to a 16 by 16 matrix using the following code:
+
+```{r}
+matrix(usps$data[1,], nrow=16)
+```
+
+Or the 4000th digit:
+
+```{r}
+matrix(usps$data[4000,], nrow=16)
+```
+
+The `image()` function can be used to plot this matrix as an image (with the argument `col = gray.colors(256, start = 1, end = 0)` to ensure it is black and white). However, as seen below the orientation is a little bit off.
+
+```{r}
+image(matrix(usps$data[4000,], nrow=16), 
+      col = gray.colors(256, start = 1, end = 0))
+```
+
+4. Use the `image()` function to plot the above number in the correct orientation. You will need to transform the matrix.
+
+5. The second object contained in the `usps` list is called `label` and contains a vector describing which digit each row is. What does the "average" 0 look like? We can get an idea by taking all of the rows corresponding to 0s, computing the element-wise (pixel-wise) average, and then transforming the resulting vector into a 16 by 16 pixel. The resulting image is called the **centroid** of the zero digits. Use the `image()` function to plot the centroids of each digit (in the correct orientation). You may notice something odd...
 
   
 
