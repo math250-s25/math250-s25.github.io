@@ -29,7 +29,7 @@ For this part, you will be exploring U.S. Congress voting data from [voteview.co
     -   `-1`: "Nay" vote
     -   `0`: Abstain or not present during roll call
 
-1.  Read the Introduction, Voting Patterns, and Conclusions sections of [this research article (Porter et al., 2005)](math250-s25.github.io/static/HouseOfRepresentatives.pdf). Based on the authors' explanation, what do the left singular vectors of their analysis represent? What do the right singular vectors represent?
+1.  Read the Introduction, Voting Patterns, and Conclusions sections of [this research article (Porter et al., 2005)](/static/HouseOfRepresentatives.pdf). Based on the authors' explanation, what do the left singular vectors of their analysis represent? What do the right singular vectors represent?
 2.  What interpretations do Porter et al. assign to their first two left singular vectors? Do you think these are reasonable interpretations? Why or why not?
 3.  Load the 118th House data into R and use the `svd` function to perform singular value decomposition on the votes data. Plot a scatter plot using your first two left singular vectors, using color to indicate political party affiliation (be sure to give the colors interpretable labels). What interpretations, if any, can you assign to the first two left singular vectors? How do your results compare with Porter et al.'s results?
 4.  What proportion of variance in the data do your first two left singular vectors account for? What does this indicate?
