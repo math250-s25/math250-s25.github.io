@@ -4870,7 +4870,12 @@ vertical-align: -.125em;
 <p>You may collaborate with your classmates and consult external resources, but you should write and submit your own answer. <strong>Any classmates with whom you collaborate should be credited at the top of your submission. Similarly, if you consult any external references, you should cite them clearly and explicitly.</strong></p>
 <section id="singular-value-decomposition" class="level1">
 <h1>Singular Value Decomposition</h1>
-<p>For this part, you will be exploring U.S. Congress voting data from <a href="https://www.voteview.com">voteview.com</a>. Your goal is to examine the partisanship of U.S. Congress using the singular value decomposition. I <strong>strongly</strong> recommend saving a version of the unprocessed .csv files on your machine so you will be able to work offline. The data are available at: * <a href="https://github.com/math250-s25/math250-s25.github.io/raw/main/labs/svd-pca-lab/H118_votes_clean.csv">118th House of Representatives</a> * <a href="https://github.com/math250-s25/math250-s25.github.io/raw/main/labs/svd-pca-lab/S118_votes_clean.csv">118th Senate</a></p>
+<p>For this part, you will be exploring U.S. Congress voting data from <a href="https://www.voteview.com">voteview.com</a>. Your goal is to examine the partisanship of U.S. Congress using the singular value decomposition. I <strong>strongly</strong> recommend saving a version of the unprocessed .csv files on your machine so you will be able to work offline. The data are available at:</p>
+<ul>
+<li><p><a href="https://github.com/math250-s25/math250-s25.github.io/raw/main/labs/svd-pca-lab/H118_votes_clean.csv">118th House of Representatives</a></p></li>
+<li><p><a href="https://github.com/math250-s25/math250-s25.github.io/raw/main/labs/svd-pca-lab/S118_votes_clean.csv">118th Senate</a></p></li>
+</ul>
+<!-- -->
 <ul>
 <li><code>rc</code> columns stand for roll calls. Each vote has it’s own roll call. The code is as follows:
 <ul>
@@ -4880,7 +4885,7 @@ vertical-align: -.125em;
 </ul></li>
 </ul>
 <ol type="1">
-<li>Read the Introduction, Voting Patterns, and Conclusions sections of <a href="HouseOfRepresentatives.pdf">this research article (Porter et al., 2005)</a>. Based on the authors’ explanation, what do the left singular vectors of their analysis represent? What do the right singular vectors represent?</li>
+<li>Read the Introduction, Voting Patterns, and Conclusions sections of <a href="http://www.math250-s25.github.io/static/HouseOfRepresentatives.pdf">this research article (Porter et al., 2005)</a>. Based on the authors’ explanation, what do the left singular vectors of their analysis represent? What do the right singular vectors represent?</li>
 <li>What interpretations do Porter et al. assign to their first two left singular vectors? Do you think these are reasonable interpretations? Why or why not?</li>
 <li>Load the 118th House data into R and use the <code>svd</code> function to perform singular value decomposition on the votes data. Plot a scatter plot using your first two left singular vectors, using color to indicate political party affiliation (be sure to give the colors interpretable labels). What interpretations, if any, can you assign to the first two left singular vectors? How do your results compare with Porter et al.’s results?</li>
 <li>What proportion of variance in the data do your first two left singular vectors account for? What does this indicate?</li>
@@ -5384,34 +5389,39 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">    code-summary: &quot;Code&quot;</span></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="an">draft:</span><span class="co"> false</span></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>Your solutions should include both R code and any output requested. You may organize your solutions using an R Markdown document or in a pdf/docx format. If you use this .Rmd as your starting template, please remove all instructions, details, and requirements. </span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>You may collaborate with your classmates and consult external resources, but you should write and submit your own answer. **Any classmates with whom you collaborate should be credited at the top of your submission. Similarly, if you consult any external references, you should cite them clearly and explicitly.**</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="fu"># Singular Value Decomposition</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>For this part, you will be exploring U.S. Congress voting data from  <span class="co">[</span><span class="ot">voteview.com</span><span class="co">](https://www.voteview.com)</span>. Your goal is to examine the partisanship of U.S. Congress using the singular value decomposition. I **strongly** recommend saving a version of the unprocessed .csv files on your machine so you will be able to work offline. The data are available at:</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="ss">  * </span><span class="co">[</span><span class="ot">118th House of Representatives</span><span class="co">](https://github.com/math250-s25/math250-s25.github.io/raw/main/labs/svd-pca-lab/H118_votes_clean.csv)</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="ss">  * </span><span class="co">[</span><span class="ot">118th Senate</span><span class="co">](https://github.com/math250-s25/math250-s25.github.io/raw/main/labs/svd-pca-lab/S118_votes_clean.csv)</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span><span class="in">`rc`</span> columns stand for roll calls. Each vote has it&#39;s own roll call. The code is as follows:</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">  * </span><span class="in">`1`</span>: &quot;Yea&quot; vote</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="ss">  * </span><span class="in">`-1`</span>: &quot;Nay&quot; vote</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="ss">  * </span><span class="in">`0`</span>: Abstain or not present during roll call</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>Your solutions should include both R code and any output requested. You may organize your solutions using an R Markdown document or in a pdf/docx format. If you use this .Rmd as your starting template, please remove all instructions, details, and requirements.</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>You may collaborate with your classmates and consult external resources, but you should write and submit your own answer. **Any classmates with whom you collaborate should be credited at the top of your submission. Similarly, if you consult any external references, you should cite them clearly and explicitly.**</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="fu"># Singular Value Decomposition</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>For this part, you will be exploring U.S. Congress voting data from <span class="co">[</span><span class="ot">voteview.com</span><span class="co">](https://www.voteview.com)</span>. Your goal is to examine the partisanship of U.S. Congress using the singular value decomposition. I **strongly** recommend saving a version of the unprocessed .csv files on your machine so you will be able to work offline. The data are available at:</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">118th House of Representatives</span><span class="co">](https://github.com/math250-s25/math250-s25.github.io/raw/main/labs/svd-pca-lab/H118_votes_clean.csv)</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="co">[</span><span class="ot">118th Senate</span><span class="co">](https://github.com/math250-s25/math250-s25.github.io/raw/main/labs/svd-pca-lab/S118_votes_clean.csv)</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- --&gt;</span></span>
 <span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Read the Introduction, Voting Patterns, and Conclusions sections of <span class="co">[</span><span class="ot">this research article (Porter et al., 2005)</span><span class="co">](HouseOfRepresentatives.pdf)</span>. Based on the authors&#39; explanation, what do the left singular vectors of their analysis represent? What do the right singular vectors represent?</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>What interpretations do Porter et al. assign to their first two left singular vectors? Do you think these are reasonable interpretations? Why or why not?</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Load the 118th House data into R and use the <span class="in">`svd`</span> function to perform singular value decomposition on the votes data. Plot a scatter plot using your first two left singular vectors, using color to indicate political party affiliation (be sure to give the colors interpretable labels). What interpretations, if any, can you assign to the first two left singular vectors? How do your results compare with Porter et al.&#39;s results?</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">4. </span>What proportion of variance in the data do your first two left singular vectors account for? What does this indicate?</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="ss">5. </span>Repeat this analysis for the 118th Senate data. Compare and contrast your results for the two datasets.</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="fu"># Principal components analysis</span></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>For this portion of the lab, you may select any dataset that interests you with which to carry out a principal components analysis. </span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>Choose a dataset and provide a brief description of your selected dataset. What does each row and column represent? You should choose a dataset with enough numerical variables to make PCA or some other dimension reduction approach appropriate (ex &gt; 5). </span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>Carry out a principal components analysis using your dataset. You may use the <span class="in">`prcomp`</span> function in R or compute the principal components by hand. </span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>Provide a biplot of the first two principal components and their variable loadings and comment on your findings. Are the first two principal components interpretable? What are the limitations of using principal components analysis with your data?</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal><i class="bi"></i></button></pre></div>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span><span class="in">`rc`</span> columns stand for roll calls. Each vote has it&#39;s own roll call. The code is as follows:</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span><span class="in">`1`</span>: &quot;Yea&quot; vote</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span><span class="in">`-1`</span>: &quot;Nay&quot; vote</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="ss">    -   </span><span class="in">`0`</span>: Abstain or not present during roll call</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Read the Introduction, Voting Patterns, and Conclusions sections of <span class="co">[</span><span class="ot">this research article (Porter et al., 2005)</span><span class="co">](http://www.math250-s25.github.io/static/HouseOfRepresentatives.pdf)</span>. Based on the authors&#39; explanation, what do the left singular vectors of their analysis represent? What do the right singular vectors represent?</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>What interpretations do Porter et al. assign to their first two left singular vectors? Do you think these are reasonable interpretations? Why or why not?</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>Load the 118th House data into R and use the <span class="in">`svd`</span> function to perform singular value decomposition on the votes data. Plot a scatter plot using your first two left singular vectors, using color to indicate political party affiliation (be sure to give the colors interpretable labels). What interpretations, if any, can you assign to the first two left singular vectors? How do your results compare with Porter et al.&#39;s results?</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="ss">4.  </span>What proportion of variance in the data do your first two left singular vectors account for? What does this indicate?</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="ss">5.  </span>Repeat this analysis for the 118th Senate data. Compare and contrast your results for the two datasets.</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="fu"># Principal components analysis</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>For this portion of the lab, you may select any dataset that interests you with which to carry out a principal components analysis.</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Choose a dataset and provide a brief description of your selected dataset. What does each row and column represent? You should choose a dataset with enough numerical variables to make PCA or some other dimension reduction approach appropriate (ex <span class="sc">\&gt;</span> 5).</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>Carry out a principal components analysis using your dataset. You may use the <span class="in">`prcomp`</span> function in R or compute the principal components by hand.</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>Provide a biplot of the first two principal components and their variable loadings and comment on your findings. Are the first two principal components interpretable? What are the limitations of using principal components analysis with your data?</span></code><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal><i class="bi"></i></button></pre></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
 <footer class="footer">
