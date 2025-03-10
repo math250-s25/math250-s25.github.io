@@ -99,6 +99,20 @@
     ]
   },
   {
+    "objectID": "labs/linear-systems/04_lab.html",
+    "href": "labs/linear-systems/04_lab.html",
+    "title": "Linear systems and least squares",
+    "section": "",
+    "text": "Your solutions should include both R code and any output requested. You may organize your solutions using an R Markdown document or in a pdf/docx format. If you use this .Rmd as your starting template, please remove all instructions, details, and requirements.\nYou may collaborate with your classmates and consult external resources, but you should write and submit your own answer. Any classmates with whom you collaborate should be credited at the top of your submission. Similarly, if you consult any external references, you should cite them clearly and explicitly."
+  },
+  {
+    "objectID": "labs/linear-systems/04_lab.html#b.-least-squares-problems",
+    "href": "labs/linear-systems/04_lab.html#b.-least-squares-problems",
+    "title": "Linear systems and least squares",
+    "section": "B. Least squares problems",
+    "text": "B. Least squares problems\nUsing the flights data from the nycflights13 package, we will implement linear regression.\n\nRemove all rows with NA values from the flights data frame. Let n be the number of remaining rows. Construct an \\(n\\) by 2 matrix \\(X\\) where the first column is all 1s (for the intercept) and the second column contains the variable distance. Construct a length-\\(n\\) vector y containing the variable air_time.\nUse the chol, backsolve, and forwardsolve functions to obtain the least squares solution \\(\\widehat{\\boldsymbol\\beta}=\\arg\\min_{\\boldsymbol\\beta}||\\mathbf{y}-X\\boldsymbol\\beta||^2\\).\nUse the qr, backsolve, and forwardsolve to obtain the least squares solution \\(\\widehat{\\boldsymbol\\beta}=\\arg\\min_{\\boldsymbol\\beta}||\\mathbf{y}-X\\boldsymbol\\beta||^2\\).\nUse the svd function to compute the pseudoinverse of \\(X\\) and obtain the least squares solution \\(\\widehat{\\boldsymbol\\beta}\\).\nUse the lm function to verify that your estimates from 2, 3, and 4 agree with the standard R linear regression implementation."
+  },
+  {
     "objectID": "labs/svd-pca-lab/03_lab.html",
     "href": "labs/svd-pca-lab/03_lab.html",
     "title": "Singular Value Decomposition and Principal Components Analysis",

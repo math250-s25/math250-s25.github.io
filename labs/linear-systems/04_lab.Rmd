@@ -7,6 +7,7 @@ format:
     embed-resources: true
     code-tools: true
     code-summary: "Code"
+draft: false
 ---
 Your solutions should include both R code and any output requested. You may organize your solutions using an R Markdown document or in a pdf/docx format. If you use this .Rmd as your starting template, please remove all instructions, details, and requirements. 
 
