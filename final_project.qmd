@@ -6,7 +6,7 @@ format:
     embed-resources: true
     code-tools: true
     code-summary: "Code"
-draft: true
+draft: false
 ---
 
 ## Overview
@@ -14,15 +14,15 @@ draft: true
 This course culminates with a project in which you will explore a dataset or dimension reduction technique of your choice. Examples of appropriate projects include the following:
 
 -   Present a dimension reduction method not covered in class. You should introduce the key technical details of your algorithm and demonstrate your selected approach on a real dataset.
--   Provide a tutorial introducing a dimension reduction method covered in this course at a level suitable for junior/senior undergraduate students or graduate students. You should apply your method to a real-world dataset, review your selected approach, explore different options and parameter configurations, and discuss strengths, weaknesses, and potential pitfalls of your approach.
+-   Provide a tutorial introducing a dimension reduction method covered in this course **at a level suitable for junior/senior undergraduate students or graduate students**. You should apply your method to a real-world dataset, review your selected approach, explore different options and parameter configurations, and discuss strengths, weaknesses, and potential pitfalls of your approach.
 -   Compare two or more dimension reduction methods covered in this course using a real-world dataset or simulated data. Review the technical details of your selected approaches, discuss differences in their performance, and offer practical advice on choosing a dimension reduction technique in your chosen setting.
 -   Extend an existing dimension reduction method or review a theoretical result/paper not discussed in class.
 
-You may work independently or with one other student. If you work with a partner, you are both responsible for contributing to all parts of the project. During the semester, you will submit a written project proposal which must be approved by the instructor. At the end of the semester, you will deliver a short oral presentation on your project and submit a written report of your results as well as a brief reflection and self-evaluation.
+You may work in groups of two students or three students. All members of a group are responsible for contributing to all parts of the project. You may work independently on your project with the instructor's approval. **If you would like to work on your own, you must meet with the instructor before submitting your project proposal.** During the semester, you will submit a written project proposal which must be approved by the instructor. At the end of the semester, you will deliver a short oral presentation on your project and submit a written report of your results as well as a brief reflection and self-evaluation.
 
 Your project will be evaluated based on the following aspects of your work:
 
--   **Technical Details**: clearly and correctly presenting the technical details of your selected dimension reduction algorithm(s) and dataset(s)
+-   **Technical Details**: clearly and correctly presenting the technical details of your selected dimension reduction algorithm(s) and dataset(s). In other words, a peer who hasn't taken this class should be able to understand how your method works based on your explanation.
 -   **Application**: appropriately applying your selected method(s) to real or simulated data, producing effective visualizations, and correctly interpreting the results.
 -   **Exposition and Presentation**: producing a written report and delivering your oral presentation.
 
@@ -65,6 +65,6 @@ At the end of the semester, you will deliver a brief lightning talk in class. Yo
 
 You will complete a 1-2 page reflection and self-evaluation on your work for this final project and course. Briefly answer the following questions:
 
-1.  If you worked with a partner, what were your specific responsibilities for the project proposal, report, and presentation?
+1.  If you worked with a group, what were your specific responsibilities for the project proposal, report, and presentation?
 2.  Describe at least one aspect of your work for this class of which you are proud. Are there any ways in which you grew this semester?
 3.  Describe at least one aspect of your work which you could have improved.
