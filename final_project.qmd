@@ -28,7 +28,7 @@ Your project will be evaluated based on the following aspects of your work:
 
 This project is intentionally open-ended: there are no predetermined right answers. Exceptional projects will demonstrate mastery of the course material and involve more than a superficial review of a method covered in class or application using a toy dataset.
 
-## Part One: Project Proposal (10 points), due 3/28
+## Part One: Project Proposal (10 points), due 4/9
 
 You will submit a 1-2 page project proposal with the following information:
 
