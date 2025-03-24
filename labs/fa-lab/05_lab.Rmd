@@ -7,6 +7,7 @@ format:
     embed-resources: true
     code-tools: true
     code-summary: "Code"
+draft: false
 ---
 Your solutions should include both R code and any output requested. You may organize your solutions using an R Markdown document or in a pdf/docx format. If you use this .Rmd as your starting template, please remove all instructions, details, and requirements. 
 
@@ -39,4 +40,5 @@ stocks <- big_tech_stock_prices |>
 4. What is the proportion of variance in the data explained by the factor? 
 
 5. Which stock has the highest uniqueness value? Which has the lowest uniqueness? Explain what the uniqueness values represent in this context.
+
 
