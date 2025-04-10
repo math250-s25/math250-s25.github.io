@@ -28,7 +28,7 @@ draft: false
 |  10  | M 3/31 | *Cesar Chavez Day - No class*                 |                                          |                                                        |                                        |
 |      | W 4/2  | *Spring Break - No class*                     |                                          |                                                        |                                        |
 |  11  | M 4/7  | Manifold learning                             | Murphy 20.3 and 20.4                     |                                                        |                                        |
-|      | W 4/9  | Manifold learning                             |                                          |                                                        |                                        |
+|      | W 4/9  | Manifold learning                             |                                          |  [Code](static/code/15_diff-map-example.R){.label .label-purple}                                                      |                                        |
 |  12  | M 4/14 | Classification                                | Murphy Ch. 9                             |                                                        |                                        |
 |      | W 4/16 | Classification                                |                                          |                                                        |                                        |
 |  13  | M 4/21 | Clustering                                    | Murphy 21.5                              |                                                        |                                        |
