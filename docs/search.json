@@ -92,11 +92,39 @@
     "href": "index.html",
     "title": "MATH250: Mathematical Methods for Data Visualization",
     "section": "",
-    "text": "Week\nDate\nTopic\nReadings\nSlides\nHW\n\n\n\n\n1\nM 1/27\nOverview: Data as representation\n\nSlides 01\nHW 01\n\n\n\nW 1/29\nHighlights of linear algebra\nStrang I.1 and I.2, Murphy Ch. 7\nNotes 02\n\n\n\n2\nM 1/3\nHighlights of linear algebra\nStrang I.3 and I.4\nNotes 03\n\n\n\n\nW 1/5\nClass canceled\n\n\n\n\n\n3\nM 2/10\nHighlights of linear algebra\nStrang I.5 and I.6\nNotes 04\nHW 02 Lab\n\n\n\nW 2/12\nHighlights of linear algebra\nStrang I.7\nNotes 05\n\n\n\n4\nM 2/17\nSingular value decomposition\nStrang I.8 and I.9\nNotes 06\n\n\n\n\nW 2/19\nSingular value decomposition\n\nNotes 07\nHW 03 Lab\n\n\n5\nM 2/24\nSingular value decomposition\nStrang I.10, I.11, and I.12, Murphy 20.1\nNotes 08\n\n\n\n\nW 2/26\nPrincipal components analysis\n\nNotes 09\n\n\n\n6\nM 3/3\nPrincipal components analysis\nStrang II.1 and II.2\nSlides 10\n\n\n\n\nW 3/5\nLinear systems and least squares\n\n\n\n\n\n7\nM 3/10\nEXAM I\n\n\n\n\n\n\nW 3/12\nLinear systems and least squares\nStrang II.1 and II.2\nNotes 11\nHW 04 Lab\n\n\n8\nM 3/17\nDimension reduction and statistical inference\nStrang II.1 and II.2\nNotes 12\n\n\n\n\nW 3/19\nDimension reduction and statistical inference\n\nNotes 13 Slides 13\n\n\n\n9\nM 3/24\nDimension reduction and statistical inference\n\n\n\n\n\n\nW 3/26\nManifold learning\nMurphy 20.3 and 20.4\nSlides 14 Slides 15\nHW 05 Lab\n\n\n10\nM 3/31\nCesar Chavez Day - No class\n\n\n\n\n\n\nW 4/2\nSpring Break - No class\n\n\n\n\n\n11\nM 4/7\nManifold learning\nMurphy 20.3 and 20.4\n\n\n\n\n\nW 4/9\nManifold learning\n\nCode\n\n\n\n12\nM 4/14\nClassification\nMurphy Ch. 9\n\n\n\n\n\nW 4/16\nClassification\n\n\n\n\n\n13\nM 4/21\nClustering\nMurphy 21.5\n\n\n\n\n\nW 4/23\nText mining\n\n\n\n\n\n14\nM 4/28\nEmbeddings and LLMs\nMurphy 20.5\n\n\n\n\n\nW 4/30\nReview\n\n\n\n\n\n15\nM 5/5\nEXAM II\n\n\n\n\n\n\nW 5/7\nFinal presentations\n\n\n\n\n\n16\nM 5/12\nFinal presentations",
+    "text": "Week\nDate\nTopic\nReadings\nSlides\nHW\n\n\n\n\n1\nM 1/27\nOverview: Data as representation\n\nSlides 01\nHW 01\n\n\n\nW 1/29\nHighlights of linear algebra\nStrang I.1 and I.2, Murphy Ch. 7\nNotes 02\n\n\n\n2\nM 1/3\nHighlights of linear algebra\nStrang I.3 and I.4\nNotes 03\n\n\n\n\nW 1/5\nClass canceled\n\n\n\n\n\n3\nM 2/10\nHighlights of linear algebra\nStrang I.5 and I.6\nNotes 04\nHW 02 Lab\n\n\n\nW 2/12\nHighlights of linear algebra\nStrang I.7\nNotes 05\n\n\n\n4\nM 2/17\nSingular value decomposition\nStrang I.8 and I.9\nNotes 06\n\n\n\n\nW 2/19\nSingular value decomposition\n\nNotes 07\nHW 03 Lab\n\n\n5\nM 2/24\nSingular value decomposition\nStrang I.10, I.11, and I.12, Murphy 20.1\nNotes 08\n\n\n\n\nW 2/26\nPrincipal components analysis\n\nNotes 09\n\n\n\n6\nM 3/3\nPrincipal components analysis\nStrang II.1 and II.2\nSlides 10\n\n\n\n\nW 3/5\nLinear systems and least squares\n\n\n\n\n\n7\nM 3/10\nEXAM I\n\n\n\n\n\n\nW 3/12\nLinear systems and least squares\nStrang II.1 and II.2\nNotes 11\nHW 04 Lab\n\n\n8\nM 3/17\nDimension reduction and statistical inference\nStrang II.1 and II.2\nNotes 12\n\n\n\n\nW 3/19\nDimension reduction and statistical inference\n\nNotes 13 Slides 13\n\n\n\n9\nM 3/24\nDimension reduction and statistical inference\n\n\n\n\n\n\nW 3/26\nManifold learning\nMurphy 20.3 and 20.4\nSlides 14 Slides 15\nHW 05 Lab\n\n\n10\nM 3/31\nCesar Chavez Day - No class\n\n\n\n\n\n\nW 4/2\nSpring Break - No class\n\n\n\n\n\n11\nM 4/7\nManifold learning\nMurphy 20.3 and 20.4\n\n\n\n\n\nW 4/9\nManifold learning\n\nCode\n\n\n\n12\nM 4/14\nManifold learning\n\nSlides 16\n\n\n\n\nW 4/16\nClassification\nMurphy Ch. 9\nSlides 17\nHW 06 Lab\n\n\n13\nM 4/21\nClustering\nMurphy 21.5\n\n\n\n\n\nW 4/23\nText mining\n\n\n\n\n\n14\nM 4/28\nEmbeddings and LLMs\nMurphy 20.5\n\n\n\n\n\nW 4/30\nReview\n\n\n\n\n\n15\nM 5/5\nEXAM II\n\n\n\n\n\n\nW 5/7\nFinal presentations\n\n\n\n\n\n16\nM 5/12\nFinal presentations",
     "crumbs": [
       "Course information",
       "Schedule"
     ]
+  },
+  {
+    "objectID": "hw/06_lab.html",
+    "href": "hw/06_lab.html",
+    "title": "Visualization and manifold learning lab",
+    "section": "",
+    "text": "Your solutions should include both R code and any output requested. You may organize your solutions using an R Markdown document or in a pdf/docx format. If you use this .Rmd as your starting template, please remove all instructions, details, and requirements.\nYou may collaborate with your classmates and consult external resources, but you should write and submit your own answer. Any classmates with whom you collaborate should be credited at the top of your submission. Similarly, if you consult any external references, you should cite them clearly and explicitly."
+  },
+  {
+    "objectID": "hw/06_lab.html#a.-multidimensional-scaling-and-isomap",
+    "href": "hw/06_lab.html#a.-multidimensional-scaling-and-isomap",
+    "title": "Visualization and manifold learning lab",
+    "section": "A. Multidimensional Scaling and Isomap",
+    "text": "A. Multidimensional Scaling and Isomap\n\nlibrary(dimRed)\nset.seed(123)\ndat &lt;- loadDataSet(\"Broken Swiss Roll\", n = 500)\n\n\nCalculate the matrix of pairwise Euclidean distances. Use multidimensional scaling to compute a two-dimensional embedding of \\(X\\). Is MDS able to “unfold” the broken swiss roll? Interpret your findings.\nWhat is the Kruskal stress of this embedding?\nUse Isomap to compute a two-dimensional embedding, using \\(k\\)-nearest neighbors to construct a graph, where \\(k=10\\). Is MDS able to “unfold” the broken swiss roll? Interpret your findings.\nRepeat your analysis for \\(k = 5, k = 8, k = 10, k = 15, k = 20\\). What happens as \\(k\\) changes? Explain and discuss your results.\nChoose another dataset from dimRed (use the dataSetList() package to get a list of available data) and repeat question 4. What do you notice?"
+  },
+  {
+    "objectID": "hw/06_lab.html#b.-artificial-clusters",
+    "href": "hw/06_lab.html#b.-artificial-clusters",
+    "title": "Visualization and manifold learning lab",
+    "section": "B. Artificial clusters",
+    "text": "B. Artificial clusters\n\nUse the following code to generate 100-dimensional data from a standard multivariate normal distribution. Use tSNE to compute a two-dimensional embedding of \\(X\\), for perplexity values 2, 5, and 10. What happens as the perplexity changes? Explain and discuss your results.\n\n\nset.seed(123)\nn &lt;- 100\np &lt;- 100\nX &lt;- matrix(rnorm(n * p), nrow = n)"
+  },
+  {
+    "objectID": "hw/06_lab.html#c.-your-choice-of-data",
+    "href": "hw/06_lab.html#c.-your-choice-of-data",
+    "title": "Visualization and manifold learning lab",
+    "section": "C. Your choice of data",
+    "text": "C. Your choice of data\n\nFor your choice of dataset (including potentially the data for your final project), compare two of the following dimension reduction and visualization methods: MDS, Isomap, Diffusion Maps, Laplacian Eigenmaps, tSNE, and UMAP. Explain and discuss any differences."
   },
   {
     "objectID": "labs/linear-systems/04_lab.html",
@@ -111,6 +139,34 @@
     "title": "Linear systems and least squares",
     "section": "B. Least squares problems",
     "text": "B. Least squares problems\nUsing the flights data from the nycflights13 package, we will implement linear regression.\n\nRemove all rows with NA values from the flights data frame. Let n be the number of remaining rows. Construct an \\(n\\) by 2 matrix \\(X\\) where the first column is all 1s (for the intercept) and the second column contains the variable distance. Construct a length-\\(n\\) vector y containing the variable air_time.\nUse the chol, backsolve, and forwardsolve functions to obtain the least squares solution \\(\\widehat{\\boldsymbol\\beta}=\\arg\\min_{\\boldsymbol\\beta}||\\mathbf{y}-X\\boldsymbol\\beta||^2\\).\nUse the qr, backsolve, and forwardsolve to obtain the least squares solution \\(\\widehat{\\boldsymbol\\beta}=\\arg\\min_{\\boldsymbol\\beta}||\\mathbf{y}-X\\boldsymbol\\beta||^2\\).\nUse the svd function to compute the pseudoinverse of \\(X\\) and obtain the least squares solution \\(\\widehat{\\boldsymbol\\beta}\\).\nUse the lm function to verify that your estimates from 2, 3, and 4 agree with the standard R linear regression implementation."
+  },
+  {
+    "objectID": "labs/manifold-learning/06_lab.html",
+    "href": "labs/manifold-learning/06_lab.html",
+    "title": "Visualization and manifold learning lab",
+    "section": "",
+    "text": "Your solutions should include both R code and any output requested. You may organize your solutions using an R Markdown document or in a pdf/docx format. If you use this .Rmd as your starting template, please remove all instructions, details, and requirements.\nYou may collaborate with your classmates and consult external resources, but you should write and submit your own answer. Any classmates with whom you collaborate should be credited at the top of your submission. Similarly, if you consult any external references, you should cite them clearly and explicitly."
+  },
+  {
+    "objectID": "labs/manifold-learning/06_lab.html#a.-multidimensional-scaling-and-isomap",
+    "href": "labs/manifold-learning/06_lab.html#a.-multidimensional-scaling-and-isomap",
+    "title": "Visualization and manifold learning lab",
+    "section": "A. Multidimensional Scaling and Isomap",
+    "text": "A. Multidimensional Scaling and Isomap\n\nlibrary(dimRed)\nset.seed(123)\ndat &lt;- loadDataSet(\"Broken Swiss Roll\", n = 500)\n\n\nCalculate the matrix of pairwise Euclidean distances. Use multidimensional scaling to compute a two-dimensional embedding of \\(X\\). Is MDS able to “unfold” the broken swiss roll? Interpret your findings.\nWhat is the Kruskal stress of this embedding?\nUse Isomap to compute a two-dimensional embedding, using \\(k\\)-nearest neighbors to construct a graph, where \\(k=10\\). Is MDS able to “unfold” the broken swiss roll? Interpret your findings.\nRepeat your analysis for \\(k = 5, k = 8, k = 10, k = 15, k = 20\\). What happens as \\(k\\) changes? Explain and discuss your results.\nChoose another dataset from dimRed (use the dataSetList() package to get a list of available data) and repeat question 4. What do you notice?"
+  },
+  {
+    "objectID": "labs/manifold-learning/06_lab.html#b.-artificial-clusters",
+    "href": "labs/manifold-learning/06_lab.html#b.-artificial-clusters",
+    "title": "Visualization and manifold learning lab",
+    "section": "B. Artificial clusters",
+    "text": "B. Artificial clusters\n\nUse the following code to generate 100-dimensional data from a standard multivariate normal distribution. Use tSNE to compute a two-dimensional embedding of \\(X\\), for perplexity values 2, 5, and 10. What happens as the perplexity changes? Explain and discuss your results.\n\n\nset.seed(123)\nn &lt;- 100\np &lt;- 100\nX &lt;- matrix(rnorm(n * p), nrow = n)"
+  },
+  {
+    "objectID": "labs/manifold-learning/06_lab.html#c.-your-choice-of-data",
+    "href": "labs/manifold-learning/06_lab.html#c.-your-choice-of-data",
+    "title": "Visualization and manifold learning lab",
+    "section": "C. Your choice of data",
+    "text": "C. Your choice of data\n\nFor your choice of dataset (including potentially the data for your final project), compare two of the following dimension reduction and visualization methods: MDS, Isomap, Diffusion Maps, Laplacian Eigenmaps, tSNE, and UMAP. Explain and discuss any differences."
   },
   {
     "objectID": "labs/svd-pca-lab/03_lab.html",

@@ -1,0 +1,49 @@
+---
+title: "Visualization and manifold learning lab"
+author: "YOUR NAME HERE"
+date: ""
+format: 
+  html:
+    embed-resources: true
+    code-tools: true
+    code-summary: "Code"
+draft: false
+---
+Your solutions should include both R code and any output requested. You may organize your solutions using an R Markdown document or in a pdf/docx format. If you use this .Rmd as your starting template, please remove all instructions, details, and requirements. 
+
+You may collaborate with your classmates and consult external resources, but you should write and submit your own answer. **Any classmates with whom you collaborate should be credited at the top of your submission. Similarly, if you consult any external references, you should cite them clearly and explicitly.**
+
+## A. Multidimensional Scaling and Isomap
+
+
+```{r, warning = F, message = F}
+library(dimRed)
+set.seed(123)
+dat <- loadDataSet("Broken Swiss Roll", n = 500)
+```
+
+1. Calculate the matrix of pairwise Euclidean distances. Use multidimensional scaling to compute a two-dimensional embedding of $X$. Is MDS able to "unfold" the broken swiss roll? Interpret your findings.
+
+2. What is the Kruskal stress of this embedding?
+
+3. Use Isomap to compute a two-dimensional embedding, using $k$-nearest neighbors to construct a graph, where $k=10$. Is MDS able to "unfold" the broken swiss roll? Interpret your findings.
+
+4. Repeat your analysis for $k = 5, k = 8, k = 10, k = 15, k = 20$. What happens as $k$ changes? Explain and discuss your results.
+
+5. Choose another dataset from `dimRed` (use the `dataSetList()` package to get a list of available data) and repeat question 4. What do you notice?
+
+## B. Artificial clusters
+
+6. Use the following code to generate 100-dimensional data from a standard multivariate normal distribution. Use tSNE to compute a two-dimensional embedding of $X$, for perplexity values 2, 5, and 10. What happens as the perplexity changes? Explain and discuss your results.
+
+```{r}
+set.seed(123)
+n <- 100
+p <- 100
+X <- matrix(rnorm(n * p), nrow = n)
+```
+
+## C. Your choice of data
+
+7. For your choice of dataset (including potentially the data for your final project), compare two of the following dimension reduction and visualization methods: MDS, Isomap, Diffusion Maps, Laplacian Eigenmaps, tSNE, and UMAP. Explain and discuss any differences.
+
